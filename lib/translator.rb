@@ -7,10 +7,11 @@ def load_library(file)
   new_library = {}
   
   library = YAML.load_file(file)
-  library.each do |key, value|
-    hash = {key.to_sym => value}
+  library.map do |key, value|
+    key.to_sym
     binding.pry
   end
+  binding.pry
 end
 
 def get_japanese_emoticon(library, english_emoticon)
