@@ -5,8 +5,9 @@ require 'yaml'
 def load_library(file)
   # code goes here
   library = YAML.load_file(file)
-  binding.pry
-  library
+  library.each |key, value|
+  binding.pry  
+  end
 end
 
 def get_japanese_emoticon(library, english_emoticon)
