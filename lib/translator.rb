@@ -8,7 +8,7 @@ def load_library(file)
   
   library = YAML.load_file(file)
   library.map do |key, value|
-    key.to_sym
+    key.to_sym => value
     binding.pry
   end
   binding.pry
