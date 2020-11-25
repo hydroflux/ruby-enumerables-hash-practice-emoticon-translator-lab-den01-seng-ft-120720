@@ -9,6 +9,9 @@ def load_library(file)
   library = YAML.load_file(file)
   library.map do |key, value|
     new_library[key.to_sym] = value
+  end
+  
+  new_library.keys.map do |key, value|
     binding.pry
   end
 end
