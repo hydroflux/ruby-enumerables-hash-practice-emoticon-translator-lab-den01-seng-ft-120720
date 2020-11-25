@@ -6,7 +6,7 @@ def load_library(file)
   # code goes here
   library = YAML.load_file(file)
   library.each |key, value|
-  binding.pry  
+    binding.pry 
   end
 end
 
