@@ -9,7 +9,7 @@ def load_library(file)
   library = YAML.load_file(file)
   library.map do |key, value|
     new_library[key.to_sym] = {}
-    binding.pry
+    english_emoticon => value[0]
     new_library[key].each do |key, value|
       binding.pry
     end
