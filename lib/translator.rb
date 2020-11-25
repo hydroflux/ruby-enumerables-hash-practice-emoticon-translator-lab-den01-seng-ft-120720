@@ -25,7 +25,7 @@ def get_english_meaning(file, emoticon)
   library.find do |key, value|
     if library[key][:japanese] == emoticon
       english_meaning = key
-      binding.pry
     end
   end
+  english_meaning
 end
