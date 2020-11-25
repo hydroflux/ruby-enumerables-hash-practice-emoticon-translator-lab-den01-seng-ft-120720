@@ -11,9 +11,11 @@ end
 
 def get_japanese_emoticon(library, english_emoticon)
   # code goes here
+  emotion = library.key(english_emoticon)
   library[emotion][1]
 end
 
-def get_english_meaning
+def get_english_meaning(emoticon)
   # code goes here
+  library.key(emoticon)
 end
