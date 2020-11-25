@@ -9,8 +9,9 @@ def load_library(file)
   library
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(library, english_emoticon)
   # code goes here
+  library[emotion][1]
 end
 
 def get_english_meaning
