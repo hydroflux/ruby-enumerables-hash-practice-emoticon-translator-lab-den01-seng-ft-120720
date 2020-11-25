@@ -11,7 +11,7 @@ def load_library(file)
     new_library[key.to_sym] = value
     binding.pry
   end
-  binding.pry
+  new_library
 end
 
 def get_japanese_emoticon(library, english_emoticon)
