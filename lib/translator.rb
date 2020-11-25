@@ -10,7 +10,7 @@ def load_library(file)
   library.map do |key, value|
     new_library[key] = {english: value[0], japanese: value[1]}
   end
-  binding.pry
+  # binding.pry
   new_library
 end
 
