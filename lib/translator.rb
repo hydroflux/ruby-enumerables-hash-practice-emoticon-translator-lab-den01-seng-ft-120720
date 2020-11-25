@@ -10,6 +10,7 @@ def load_library(file)
   library.map do |key, value|
     new_library[key.to_sym] = value
   end
+  binding.pry
   new_library
 end
 
