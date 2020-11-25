@@ -8,7 +8,7 @@ def load_library(file)
   
   library = YAML.load_file(file)
   library.each do |key, value|
-    hash = {key: value}
+    hash = {key => value}
     binding.pry
   end
 end
