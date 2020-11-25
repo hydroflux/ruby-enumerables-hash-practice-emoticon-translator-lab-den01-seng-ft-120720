@@ -8,7 +8,7 @@ def load_library(file)
   
   library = YAML.load_file(file)
   library.map do |key, value|
-    new_library[key.to_sym] = {english: value[0], japanese: value[1]}
+    new_library[key] = {english: value[0], japanese: value[1]}
   end
   binding.pry
   new_library
