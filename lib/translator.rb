@@ -13,12 +13,22 @@ def load_library(file)
   new_library
 end
 
-def get_japanese_emoticon(file, english_emoticon)
-  # Instantiate a variable for "Japanese meaning"
-  japanese_meaning = "Sorry, that emoticon was not found"
+def get_japanese_emoticon(file, emoticon)
+  # Instantiate a variable for "Japanese emoticon"
+  japanese_emoticon = "Sorry, that emoticon was not found"
   
   #Load the YAML Library
   library = load_library(file)
+  
+  #Locate the emoticon
+  library.find do |key, value|
+    if library[key][:english] == emoticon
+      japanese_emoticon = library[key][:japanese]
+    end
+  end
+  
+  # Return Japanese emoticon
+  japanese_emoticon
 end
 
 def get_english_meaning(file, emoticon)
@@ -27,10 +37,14 @@ def get_english_meaning(file, emoticon)
   
   # Load the YAML Library
   library = load_library(file)
+  
+  #Locate the emoticon
   library.find do |key, value|
     if library[key][:japanese] == emoticon
       english_meaning = key
     end
   end
+  
+  # Return English meaning
   english_meaning
 end
