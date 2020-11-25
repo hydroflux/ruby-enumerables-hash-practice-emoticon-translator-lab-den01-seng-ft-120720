@@ -5,7 +5,7 @@ require 'yaml'
 def load_library(file)
   # code goes here
   library = YAML.load_file(file)
-  binding.pry
+  # binding.pry
   library
 end
 
