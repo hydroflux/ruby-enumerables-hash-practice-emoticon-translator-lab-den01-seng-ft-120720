@@ -4,9 +4,12 @@ require 'yaml'
 
 def load_library(file)
   # code goes here
+  new_library = {}
+  
   library = YAML.load_file(file)
   library.each do |key, value|
-    binding.pry 
+    hash = {key: value}
+    binding.pry
   end
 end
 
