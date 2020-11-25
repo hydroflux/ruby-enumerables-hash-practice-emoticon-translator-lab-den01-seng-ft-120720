@@ -14,15 +14,18 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, english_emoticon)
-  # code goes here
-  emotion = file.key(english_emoticon)
-  library[emotion][1]
+  # Instantiate a variable for "Japanese meaning"
+  japanese_meaning = "Sorry, that emoticon was not found"
+  
+  #Load the YAML Library
+  library = load_library(file)
 end
 
 def get_english_meaning(file, emoticon)
-  # code goes here
+  # Instantiate a variable for "English meaning"
   english_meaning = "Sorry, that emoticon was not found"
   
+  # Load the YAML Library
   library = load_library(file)
   library.find do |key, value|
     if library[key][:japanese] == emoticon
