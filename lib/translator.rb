@@ -24,4 +24,5 @@ def get_english_meaning(file, emoticon)
   library = load_library(file)
   library.map do |key, value|
     binding.pry
+  end
 end
