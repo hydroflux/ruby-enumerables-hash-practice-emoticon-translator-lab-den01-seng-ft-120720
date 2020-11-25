@@ -11,6 +11,7 @@ def load_library(file)
     new_library[key.to_sym] = {english: value[0], japanese: value[1]}
   end
   new_library
+  binding.pry
 end
 
 def get_japanese_emoticon(library, english_emoticon)
