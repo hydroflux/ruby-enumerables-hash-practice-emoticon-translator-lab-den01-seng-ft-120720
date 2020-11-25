@@ -10,6 +10,7 @@ def load_library(file)
   library.map do |key, value|
     new_library[key.to_sym] = {english_emoticon: value[0], japanese_emoticon: value[1]}
   end
+  new_library
 end
 
 def get_japanese_emoticon(library, english_emoticon)
