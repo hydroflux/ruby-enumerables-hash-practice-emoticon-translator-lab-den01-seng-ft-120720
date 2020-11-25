@@ -21,7 +21,7 @@ end
 
 def get_english_meaning(file, emoticon)
   # code goes here
-  english_meaning = ''
+  english_meaning = "Sorry, that emoticon was not found"
   
   library = load_library(file)
   library.find do |key, value|
